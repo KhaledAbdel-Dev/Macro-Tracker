@@ -1,0 +1,21 @@
+body{
+  padding-top:80px;
+  word-wrap:break-word;
+  background-color: rgb(23, 23, 84);
+  color: aliceblue;
+}
+img{
+  height: 200px;
+}
+.jumbotron{
+  color: rgb(23, 23, 84);
+}
+.container, .row{
+  text-align: center;
+}
+#delete-button{
+  align-items: center;
+}
+.display{
+  list-style-type: none;
+}

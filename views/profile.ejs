@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <title>Macro Tracker</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header text-center">
+        <h1>Macro Tracker</h1>
+        <h3>Helping you get right for bulking szn.</h2>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+
+        <!-- LOCAL INFORMATION -->
+          <h2> Daily Intake </h2>
+    <ul class="display">
+
+        <% for(var i = 0; i < times.length; i++) {%>
+            <li class="display">
+                <span><%= times[i].type %></span>:
+                <span><%= times[i].item %></span>:
+                <span><%= times[i].cals %></span> CAL :
+                <span><%= times[i].pro %></span> g of protein:
+                <span><%= times[i].carbs %></span> g of carbs
+            </li>
+        <% } %>
+    </ul> 
+        <h3 id="jim"></h3>       
+          <form action="/times" method="POST">
+            <select name="type">
+                <option value="">Meal or Snack</option>
+                <option value="meal">Meal</option>
+                <option value="snack">Snack</option>
+            </select>
+            <input type="text" placeholder="What did you eat?" name="item">
+            <input type="text" placeholder="Total Calories" name="cals">
+            <input type="text" placeholder="Protein" name="pro">
+            <input type="text" placeholder="Carbs" name="carbs">
+            <button id="submit-button" type="submit">Submit</button>
+        </form>
+    </div>
+    <button id="delete-button">Clear Board</button>
+</div>
+
+
+<script src="main.js"></script>
+
+</body>
+</html>
